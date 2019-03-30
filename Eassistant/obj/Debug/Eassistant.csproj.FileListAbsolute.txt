@@ -8,3 +8,13 @@ E:\Github\Eassistant\Eassistant\obj\Debug\Eassistant.csproj.GenerateResource.cac
 E:\Github\Eassistant\Eassistant\obj\Debug\Eassistant.csproj.CoreCompileInputs.cache
 E:\Github\Eassistant\Eassistant\obj\Debug\Eassistant.exe
 E:\Github\Eassistant\Eassistant\obj\Debug\Eassistant.pdb
+E:\Github\Eassistant\Eassistant\bin\Debug\Hunspellx64.dll
+E:\Github\Eassistant\Eassistant\bin\Debug\Hunspellx86.dll
+E:\Github\Eassistant\Eassistant\bin\Debug\Newtonsoft.Json.dll
+E:\Github\Eassistant\Eassistant\bin\Debug\NHunspell.dll
+E:\Github\Eassistant\Eassistant\bin\Debug\Newtonsoft.Json.pdb
+E:\Github\Eassistant\Eassistant\bin\Debug\Newtonsoft.Json.xml
+E:\Github\Eassistant\Eassistant\bin\Debug\NHunspell.pdb
+E:\Github\Eassistant\Eassistant\obj\Debug\Eassistant.Modules.About.resources
+E:\Github\Eassistant\Eassistant\obj\Debug\Eassistant.Modules.Translator.resources
+E:\Github\Eassistant\Eassistant\obj\Debug\Eassistant.csproj.CopyComplete
