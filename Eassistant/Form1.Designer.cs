@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.tableLayoutPanelLeftButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanelRightButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.panelMainMenu = new System.Windows.Forms.Panel();
-            this.buttonAbout = new System.Windows.Forms.Button();
             this.buttonTranslator = new System.Windows.Forms.Button();
             this.buttonHomePage = new System.Windows.Forms.Button();
             this.buttonTextEditor = new System.Windows.Forms.Button();
+            this.tableLayoutPanelRightButtons = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonAbout = new System.Windows.Forms.Button();
+            this.panelMainMenu = new System.Windows.Forms.Panel();
+            this.buttonSpellChecker = new System.Windows.Forms.Button();
+            this.buttonVoiceRecorder = new System.Windows.Forms.Button();
             this.tableLayoutPanelLeftButtons.SuspendLayout();
             this.tableLayoutPanelRightButtons.SuspendLayout();
             this.SuspendLayout();
@@ -57,41 +59,6 @@
             this.tableLayoutPanelLeftButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanelLeftButtons.Size = new System.Drawing.Size(100, 535);
             this.tableLayoutPanelLeftButtons.TabIndex = 0;
-            // 
-            // tableLayoutPanelRightButtons
-            // 
-            this.tableLayoutPanelRightButtons.ColumnCount = 1;
-            this.tableLayoutPanelRightButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelRightButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelRightButtons.Controls.Add(this.buttonAbout, 0, 0);
-            this.tableLayoutPanelRightButtons.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tableLayoutPanelRightButtons.Location = new System.Drawing.Point(970, 0);
-            this.tableLayoutPanelRightButtons.Name = "tableLayoutPanelRightButtons";
-            this.tableLayoutPanelRightButtons.RowCount = 3;
-            this.tableLayoutPanelRightButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanelRightButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanelRightButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanelRightButtons.Size = new System.Drawing.Size(100, 535);
-            this.tableLayoutPanelRightButtons.TabIndex = 1;
-            // 
-            // panelMainMenu
-            // 
-            this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMainMenu.Location = new System.Drawing.Point(100, 0);
-            this.panelMainMenu.Name = "panelMainMenu";
-            this.panelMainMenu.Size = new System.Drawing.Size(870, 535);
-            this.panelMainMenu.TabIndex = 2;
-            // 
-            // buttonAbout
-            // 
-            this.buttonAbout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAbout.Image = ((System.Drawing.Image)(resources.GetObject("buttonAbout.Image")));
-            this.buttonAbout.Location = new System.Drawing.Point(3, 3);
-            this.buttonAbout.Name = "buttonAbout";
-            this.buttonAbout.Size = new System.Drawing.Size(94, 172);
-            this.buttonAbout.TabIndex = 0;
-            this.buttonAbout.UseVisualStyleBackColor = true;
             // 
             // buttonTranslator
             // 
@@ -126,6 +93,65 @@
             this.buttonTextEditor.TabIndex = 2;
             this.buttonTextEditor.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanelRightButtons
+            // 
+            this.tableLayoutPanelRightButtons.ColumnCount = 1;
+            this.tableLayoutPanelRightButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelRightButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelRightButtons.Controls.Add(this.buttonVoiceRecorder, 0, 2);
+            this.tableLayoutPanelRightButtons.Controls.Add(this.buttonAbout, 0, 0);
+            this.tableLayoutPanelRightButtons.Controls.Add(this.buttonSpellChecker, 0, 1);
+            this.tableLayoutPanelRightButtons.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tableLayoutPanelRightButtons.Location = new System.Drawing.Point(970, 0);
+            this.tableLayoutPanelRightButtons.Name = "tableLayoutPanelRightButtons";
+            this.tableLayoutPanelRightButtons.RowCount = 3;
+            this.tableLayoutPanelRightButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelRightButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelRightButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanelRightButtons.Size = new System.Drawing.Size(100, 535);
+            this.tableLayoutPanelRightButtons.TabIndex = 1;
+            // 
+            // buttonAbout
+            // 
+            this.buttonAbout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAbout.Image = ((System.Drawing.Image)(resources.GetObject("buttonAbout.Image")));
+            this.buttonAbout.Location = new System.Drawing.Point(3, 3);
+            this.buttonAbout.Name = "buttonAbout";
+            this.buttonAbout.Size = new System.Drawing.Size(94, 172);
+            this.buttonAbout.TabIndex = 0;
+            this.buttonAbout.UseVisualStyleBackColor = true;
+            // 
+            // panelMainMenu
+            // 
+            this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMainMenu.Location = new System.Drawing.Point(100, 0);
+            this.panelMainMenu.Name = "panelMainMenu";
+            this.panelMainMenu.Size = new System.Drawing.Size(870, 535);
+            this.panelMainMenu.TabIndex = 2;
+            // 
+            // buttonSpellChecker
+            // 
+            this.buttonSpellChecker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSpellChecker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSpellChecker.Image = ((System.Drawing.Image)(resources.GetObject("buttonSpellChecker.Image")));
+            this.buttonSpellChecker.Location = new System.Drawing.Point(3, 181);
+            this.buttonSpellChecker.Name = "buttonSpellChecker";
+            this.buttonSpellChecker.Size = new System.Drawing.Size(94, 172);
+            this.buttonSpellChecker.TabIndex = 1;
+            this.buttonSpellChecker.UseVisualStyleBackColor = true;
+            // 
+            // buttonVoiceRecorder
+            // 
+            this.buttonVoiceRecorder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonVoiceRecorder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVoiceRecorder.Image = ((System.Drawing.Image)(resources.GetObject("buttonVoiceRecorder.Image")));
+            this.buttonVoiceRecorder.Location = new System.Drawing.Point(3, 359);
+            this.buttonVoiceRecorder.Name = "buttonVoiceRecorder";
+            this.buttonVoiceRecorder.Size = new System.Drawing.Size(94, 173);
+            this.buttonVoiceRecorder.TabIndex = 2;
+            this.buttonVoiceRecorder.UseVisualStyleBackColor = true;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,6 +179,8 @@
         private System.Windows.Forms.Button buttonHomePage;
         private System.Windows.Forms.Button buttonAbout;
         private System.Windows.Forms.Button buttonTextEditor;
+        private System.Windows.Forms.Button buttonSpellChecker;
+        private System.Windows.Forms.Button buttonVoiceRecorder;
     }
 }
 

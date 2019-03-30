@@ -30,13 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Translator));
             this.tableLayoutPanelTranslatorTopMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonTranslate = new System.Windows.Forms.Button();
             this.pictureBoxFlagFrom = new System.Windows.Forms.PictureBox();
             this.pictureBoxFlagTo = new System.Windows.Forms.PictureBox();
             this.pictureBoxChangeLanguage = new System.Windows.Forms.PictureBox();
+            this.buttonTranslate = new System.Windows.Forms.Button();
             this.splitContainerTextFields = new System.Windows.Forms.SplitContainer();
             this.richTextBoxSourceText = new System.Windows.Forms.RichTextBox();
             this.richTextBoxOutput = new System.Windows.Forms.RichTextBox();
+            this.panelTextFields = new System.Windows.Forms.Panel();
+            this.tableLayoutPanelActionButtons = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonSpeak = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.tableLayoutPanelTranslatorTopMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFlagFrom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFlagTo)).BeginInit();
@@ -45,6 +49,8 @@
             this.splitContainerTextFields.Panel1.SuspendLayout();
             this.splitContainerTextFields.Panel2.SuspendLayout();
             this.splitContainerTextFields.SuspendLayout();
+            this.panelTextFields.SuspendLayout();
+            this.tableLayoutPanelActionButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanelTranslatorTopMenu
@@ -61,19 +67,9 @@
             this.tableLayoutPanelTranslatorTopMenu.Name = "tableLayoutPanelTranslatorTopMenu";
             this.tableLayoutPanelTranslatorTopMenu.RowCount = 1;
             this.tableLayoutPanelTranslatorTopMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelTranslatorTopMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelTranslatorTopMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanelTranslatorTopMenu.Size = new System.Drawing.Size(602, 60);
             this.tableLayoutPanelTranslatorTopMenu.TabIndex = 0;
-            // 
-            // buttonTranslate
-            // 
-            this.buttonTranslate.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonTranslate.Location = new System.Drawing.Point(0, 342);
-            this.buttonTranslate.Name = "buttonTranslate";
-            this.buttonTranslate.Size = new System.Drawing.Size(602, 23);
-            this.buttonTranslate.TabIndex = 1;
-            this.buttonTranslate.Text = "Перевести";
-            this.buttonTranslate.UseVisualStyleBackColor = true;
             // 
             // pictureBoxFlagFrom
             // 
@@ -106,11 +102,22 @@
             this.pictureBoxChangeLanguage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxChangeLanguage.TabIndex = 2;
             this.pictureBoxChangeLanguage.TabStop = false;
+            this.pictureBoxChangeLanguage.Click += new System.EventHandler(this.pictureBoxChangeLanguage_Click);
+            // 
+            // buttonTranslate
+            // 
+            this.buttonTranslate.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonTranslate.Location = new System.Drawing.Point(81, 342);
+            this.buttonTranslate.Name = "buttonTranslate";
+            this.buttonTranslate.Size = new System.Drawing.Size(521, 23);
+            this.buttonTranslate.TabIndex = 1;
+            this.buttonTranslate.Text = "Перевести";
+            this.buttonTranslate.UseVisualStyleBackColor = true;
             // 
             // splitContainerTextFields
             // 
             this.splitContainerTextFields.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerTextFields.Location = new System.Drawing.Point(0, 60);
+            this.splitContainerTextFields.Location = new System.Drawing.Point(0, 0);
             this.splitContainerTextFields.Name = "splitContainerTextFields";
             this.splitContainerTextFields.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -121,7 +128,7 @@
             // splitContainerTextFields.Panel2
             // 
             this.splitContainerTextFields.Panel2.Controls.Add(this.richTextBoxOutput);
-            this.splitContainerTextFields.Size = new System.Drawing.Size(602, 282);
+            this.splitContainerTextFields.Size = new System.Drawing.Size(521, 282);
             this.splitContainerTextFields.SplitterDistance = 153;
             this.splitContainerTextFields.TabIndex = 2;
             // 
@@ -130,7 +137,7 @@
             this.richTextBoxSourceText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBoxSourceText.Location = new System.Drawing.Point(0, 0);
             this.richTextBoxSourceText.Name = "richTextBoxSourceText";
-            this.richTextBoxSourceText.Size = new System.Drawing.Size(602, 153);
+            this.richTextBoxSourceText.Size = new System.Drawing.Size(521, 153);
             this.richTextBoxSourceText.TabIndex = 0;
             this.richTextBoxSourceText.Text = "";
             // 
@@ -139,17 +146,65 @@
             this.richTextBoxOutput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBoxOutput.Location = new System.Drawing.Point(0, 0);
             this.richTextBoxOutput.Name = "richTextBoxOutput";
-            this.richTextBoxOutput.Size = new System.Drawing.Size(602, 125);
+            this.richTextBoxOutput.ReadOnly = true;
+            this.richTextBoxOutput.Size = new System.Drawing.Size(521, 125);
             this.richTextBoxOutput.TabIndex = 0;
             this.richTextBoxOutput.Text = "";
+            // 
+            // panelTextFields
+            // 
+            this.panelTextFields.Controls.Add(this.splitContainerTextFields);
+            this.panelTextFields.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelTextFields.Location = new System.Drawing.Point(81, 60);
+            this.panelTextFields.Name = "panelTextFields";
+            this.panelTextFields.Size = new System.Drawing.Size(521, 282);
+            this.panelTextFields.TabIndex = 4;
+            // 
+            // tableLayoutPanelActionButtons
+            // 
+            this.tableLayoutPanelActionButtons.ColumnCount = 1;
+            this.tableLayoutPanelActionButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelActionButtons.Controls.Add(this.buttonClear, 0, 1);
+            this.tableLayoutPanelActionButtons.Controls.Add(this.buttonSpeak, 0, 0);
+            this.tableLayoutPanelActionButtons.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tableLayoutPanelActionButtons.Location = new System.Drawing.Point(0, 60);
+            this.tableLayoutPanelActionButtons.Name = "tableLayoutPanelActionButtons";
+            this.tableLayoutPanelActionButtons.RowCount = 2;
+            this.tableLayoutPanelActionButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelActionButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelActionButtons.Size = new System.Drawing.Size(81, 305);
+            this.tableLayoutPanelActionButtons.TabIndex = 5;
+            // 
+            // buttonSpeak
+            // 
+            this.buttonSpeak.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSpeak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSpeak.Image = ((System.Drawing.Image)(resources.GetObject("buttonSpeak.Image")));
+            this.buttonSpeak.Location = new System.Drawing.Point(3, 3);
+            this.buttonSpeak.Name = "buttonSpeak";
+            this.buttonSpeak.Size = new System.Drawing.Size(75, 146);
+            this.buttonSpeak.TabIndex = 0;
+            this.buttonSpeak.UseVisualStyleBackColor = true;
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClear.Image = ((System.Drawing.Image)(resources.GetObject("buttonClear.Image")));
+            this.buttonClear.Location = new System.Drawing.Point(3, 155);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(75, 147);
+            this.buttonClear.TabIndex = 1;
+            this.buttonClear.UseVisualStyleBackColor = true;
             // 
             // Translator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.Controls.Add(this.splitContainerTextFields);
+            this.Controls.Add(this.panelTextFields);
             this.Controls.Add(this.buttonTranslate);
+            this.Controls.Add(this.tableLayoutPanelActionButtons);
             this.Controls.Add(this.tableLayoutPanelTranslatorTopMenu);
             this.Name = "Translator";
             this.Size = new System.Drawing.Size(602, 365);
@@ -161,6 +216,8 @@
             this.splitContainerTextFields.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerTextFields)).EndInit();
             this.splitContainerTextFields.ResumeLayout(false);
+            this.panelTextFields.ResumeLayout(false);
+            this.tableLayoutPanelActionButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -175,5 +232,9 @@
         private System.Windows.Forms.SplitContainer splitContainerTextFields;
         private System.Windows.Forms.RichTextBox richTextBoxSourceText;
         private System.Windows.Forms.RichTextBox richTextBoxOutput;
+        private System.Windows.Forms.Panel panelTextFields;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelActionButtons;
+        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonSpeak;
     }
 }

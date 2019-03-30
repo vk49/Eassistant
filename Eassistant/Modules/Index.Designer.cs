@@ -32,14 +32,14 @@
             this.buttonGrammarExercises = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.tableLayoutPanelDateTime = new System.Windows.Forms.TableLayoutPanel();
-            this.labelTime = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
+            this.labelTime = new System.Windows.Forms.Label();
             this.panelIndexControls = new System.Windows.Forms.Panel();
-            this.timerDateTime = new System.Windows.Forms.Timer(this.components);
-            this.buttonDuolingo = new System.Windows.Forms.Button();
-            this.buttonDictionary = new System.Windows.Forms.Button();
-            this.buttonLingualeo = new System.Windows.Forms.Button();
             this.buttonFeedback = new System.Windows.Forms.Button();
+            this.buttonSpeechSynth = new System.Windows.Forms.Button();
+            this.buttonDictionary = new System.Windows.Forms.Button();
+            this.buttonDuolingo = new System.Windows.Forms.Button();
+            this.timerDateTime = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanelDateTime.SuspendLayout();
             this.panelIndexControls.SuspendLayout();
             this.SuspendLayout();
@@ -80,18 +80,6 @@
             this.tableLayoutPanelDateTime.Size = new System.Drawing.Size(865, 90);
             this.tableLayoutPanelDateTime.TabIndex = 2;
             // 
-            // labelTime
-            // 
-            this.labelTime.AutoSize = true;
-            this.labelTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTime.Location = new System.Drawing.Point(3, 0);
-            this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(426, 90);
-            this.labelTime.TabIndex = 0;
-            this.labelTime.Text = "label1";
-            this.labelTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // labelDate
             // 
             this.labelDate.AutoSize = true;
@@ -104,10 +92,22 @@
             this.labelDate.Text = "label2";
             this.labelDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // labelTime
+            // 
+            this.labelTime.AutoSize = true;
+            this.labelTime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTime.Location = new System.Drawing.Point(3, 0);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(426, 90);
+            this.labelTime.TabIndex = 0;
+            this.labelTime.Text = "label1";
+            this.labelTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panelIndexControls
             // 
             this.panelIndexControls.Controls.Add(this.buttonFeedback);
-            this.panelIndexControls.Controls.Add(this.buttonLingualeo);
+            this.panelIndexControls.Controls.Add(this.buttonSpeechSynth);
             this.panelIndexControls.Controls.Add(this.buttonDictionary);
             this.panelIndexControls.Controls.Add(this.buttonDuolingo);
             this.panelIndexControls.Controls.Add(this.monthCalendar1);
@@ -118,24 +118,33 @@
             this.panelIndexControls.Size = new System.Drawing.Size(865, 440);
             this.panelIndexControls.TabIndex = 3;
             // 
-            // timerDateTime
+            // buttonFeedback
             // 
-            this.timerDateTime.Interval = 1000;
-            this.timerDateTime.Tick += new System.EventHandler(this.timerDateTime_Tick);
+            this.buttonFeedback.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.buttonFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonFeedback.ForeColor = System.Drawing.Color.White;
+            this.buttonFeedback.Location = new System.Drawing.Point(332, 156);
+            this.buttonFeedback.Name = "buttonFeedback";
+            this.buttonFeedback.Size = new System.Drawing.Size(140, 220);
+            this.buttonFeedback.TabIndex = 5;
+            this.buttonFeedback.Text = "Обратная связь";
+            this.buttonFeedback.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonFeedback.UseVisualStyleBackColor = false;
             // 
-            // buttonDuolingo
+            // buttonSpeechSynth
             // 
-            this.buttonDuolingo.BackColor = System.Drawing.Color.Magenta;
-            this.buttonDuolingo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDuolingo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDuolingo.ForeColor = System.Drawing.Color.White;
-            this.buttonDuolingo.Location = new System.Drawing.Point(48, 318);
-            this.buttonDuolingo.Name = "buttonDuolingo";
-            this.buttonDuolingo.Size = new System.Drawing.Size(135, 58);
-            this.buttonDuolingo.TabIndex = 2;
-            this.buttonDuolingo.Text = "Duolingo";
-            this.buttonDuolingo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonDuolingo.UseVisualStyleBackColor = false;
+            this.buttonSpeechSynth.BackColor = System.Drawing.Color.Orange;
+            this.buttonSpeechSynth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSpeechSynth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSpeechSynth.ForeColor = System.Drawing.Color.White;
+            this.buttonSpeechSynth.Location = new System.Drawing.Point(189, 156);
+            this.buttonSpeechSynth.Name = "buttonSpeechSynth";
+            this.buttonSpeechSynth.Size = new System.Drawing.Size(140, 220);
+            this.buttonSpeechSynth.TabIndex = 4;
+            this.buttonSpeechSynth.Text = "Синтез речи";
+            this.buttonSpeechSynth.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonSpeechSynth.UseVisualStyleBackColor = false;
             // 
             // buttonDictionary
             // 
@@ -151,33 +160,24 @@
             this.buttonDictionary.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonDictionary.UseVisualStyleBackColor = false;
             // 
-            // buttonLingualeo
+            // buttonDuolingo
             // 
-            this.buttonLingualeo.BackColor = System.Drawing.Color.Orange;
-            this.buttonLingualeo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLingualeo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLingualeo.ForeColor = System.Drawing.Color.White;
-            this.buttonLingualeo.Location = new System.Drawing.Point(189, 156);
-            this.buttonLingualeo.Name = "buttonLingualeo";
-            this.buttonLingualeo.Size = new System.Drawing.Size(140, 220);
-            this.buttonLingualeo.TabIndex = 4;
-            this.buttonLingualeo.Text = "Lingualeo";
-            this.buttonLingualeo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonLingualeo.UseVisualStyleBackColor = false;
+            this.buttonDuolingo.BackColor = System.Drawing.Color.Magenta;
+            this.buttonDuolingo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDuolingo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDuolingo.ForeColor = System.Drawing.Color.White;
+            this.buttonDuolingo.Location = new System.Drawing.Point(48, 318);
+            this.buttonDuolingo.Name = "buttonDuolingo";
+            this.buttonDuolingo.Size = new System.Drawing.Size(135, 58);
+            this.buttonDuolingo.TabIndex = 2;
+            this.buttonDuolingo.Text = "Duolingo";
+            this.buttonDuolingo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonDuolingo.UseVisualStyleBackColor = false;
             // 
-            // buttonFeedback
+            // timerDateTime
             // 
-            this.buttonFeedback.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.buttonFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonFeedback.ForeColor = System.Drawing.Color.White;
-            this.buttonFeedback.Location = new System.Drawing.Point(332, 156);
-            this.buttonFeedback.Name = "buttonFeedback";
-            this.buttonFeedback.Size = new System.Drawing.Size(140, 220);
-            this.buttonFeedback.TabIndex = 5;
-            this.buttonFeedback.Text = "Обратная связь";
-            this.buttonFeedback.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonFeedback.UseVisualStyleBackColor = false;
+            this.timerDateTime.Interval = 1000;
+            this.timerDateTime.Tick += new System.EventHandler(this.timerDateTime_Tick);
             // 
             // Index
             // 
@@ -205,7 +205,7 @@
         private System.Windows.Forms.Panel panelIndexControls;
         private System.Windows.Forms.Timer timerDateTime;
         private System.Windows.Forms.Button buttonFeedback;
-        private System.Windows.Forms.Button buttonLingualeo;
+        private System.Windows.Forms.Button buttonSpeechSynth;
         private System.Windows.Forms.Button buttonDictionary;
         private System.Windows.Forms.Button buttonDuolingo;
     }

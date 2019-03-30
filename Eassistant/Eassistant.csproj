@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Translation.cs" />
+    <Compile Include="Classes\YandexTranslator.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +71,12 @@
     <Compile Include="Modules\Index.Designer.cs">
       <DependentUpon>Index.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\SpellChecker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Modules\SpellChecker.Designer.cs">
+      <DependentUpon>SpellChecker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modules\Translator.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\SpellChecker.resx">
+      <DependentUpon>SpellChecker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modules\Translator.resx">
       <DependentUpon>Translator.cs</DependentUpon>
@@ -115,6 +126,7 @@
   <ItemGroup>
     <Folder Include="Design\Icons\" />
     <Folder Include="Design\Wallpapers\" />
+    <Folder Include="Modules\Forms\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Hunspellx64.dll">
