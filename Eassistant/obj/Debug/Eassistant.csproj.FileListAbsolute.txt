@@ -1,0 +1,10 @@
+E:\Github\Eassistant\Eassistant\bin\Debug\Eassistant.exe.config
+E:\Github\Eassistant\Eassistant\bin\Debug\Eassistant.exe
+E:\Github\Eassistant\Eassistant\bin\Debug\Eassistant.pdb
+E:\Github\Eassistant\Eassistant\obj\Debug\Eassistant.csprojAssemblyReference.cache
+E:\Github\Eassistant\Eassistant\obj\Debug\Eassistant.MainMenu.resources
+E:\Github\Eassistant\Eassistant\obj\Debug\Eassistant.Properties.Resources.resources
+E:\Github\Eassistant\Eassistant\obj\Debug\Eassistant.csproj.GenerateResource.cache
+E:\Github\Eassistant\Eassistant\obj\Debug\Eassistant.csproj.CoreCompileInputs.cache
+E:\Github\Eassistant\Eassistant\obj\Debug\Eassistant.exe
+E:\Github\Eassistant\Eassistant\obj\Debug\Eassistant.pdb
